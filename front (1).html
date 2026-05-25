@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DockerHub... Wait, No. DevOpsHub 18+</title>
+    <style>
+        :root {
+            --bg-color: #111111;
+            --card-bg: #1b1b1b;
+            --primary-color: #ff9900; /* Тот самый оранжевый */
+            --text-color: #ffffff;
+            --text-muted: #999999;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Шапка сайта */
+        header {
+            background-color: #000000;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            background-color: var(--primary-color);
+            color: #000000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 4px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Контент */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Сетка видео */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            background-color: var(--card-bg);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .video-card:hover {
+            transform: scale(1.03);
+        }
+
+        /* Заглушка для фото (чтобы не тащить тяжелые файлы) */
+        .thumbnail {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(45deg, #222, #444);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            position: relative;
+        }
+
+        .duration {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background-color: rgba(0,0,0,0.8);
+            padding: 2px 6px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+
+        .video-info {
+            padding: 12px;
+        }
+
+        .video-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .video-title a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .video-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .video-stats {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rating {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        /* Дисклеймер внизу */
+        footer {
+            text-align: center;
+            padding: 4px;
+            background-color: #000;
+            color: var(--text-muted);
+            font-size: 12px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Docker<span>HUB</span></div>
+        <div class="nav-links">
+            <a href="#">Categories</a>
+            <a href="#">Live Volumes</a>
+            <a href="#">Hot Containers</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>🔥 Рекомендуем прямо сейчас</h2>
+        
+        <div class="video-grid">
+            
+            <!-- Карточка 1 -->
+            <div class="video-card">
+                <div class="thumbnail">🐳🔞<span class="duration">14:23</span></div>
+                <div class="video-info">
+                    <div class="video-title"><a href="#">Горячий Docker Compose жестко монтирует 3 Volume одновременно</a></div>
+                    <div class="video-stats">
+                        <span>Просмотры: 1.2M</span>
+                        <span class="rating">99%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="video-card">
+                <div class="thumbnail">🥵📁<span class="duration">08:45</span></div>
+                <div class="video-info">
+                    <div class="video-title"><a href="#">Молоденький Nginx остался БЕЗ ПРИСМОТРА и потерял все логи</a></div>
+                    <div class="video-stats">
+                        <span>Просмотры: 850K</span>
+                        <span class="rating">95%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="video-card">
+                <div class="thumbnail">🔥💾<span class="duration">22:10</span></div>
+                <div class="video-info">
+                    <div class="video-title"><a href="#">Азиатский PostgreSQL заполняет хранилище до отказа (PERSISTENT DATA)</a></div>
+                    <div class="video-stats">
+                        <span>Просмотры: 3.4M</span>
+                        <span class="rating">98%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="video-card">
+                <div class="thumbnail">❌🛑<span class="duration">03:15</span></div>
+                <div class="video-info">
+                    <div class="video-title"><a href="#">Грубый `docker rm -f` уничтожил контейнер, но ВОЛЮМ ОСТАЛСЯ ЖИТЬ!</a></div>
+                    <div class="video-stats">
+                        <span>Просмотры: 500K</span>
+                        <span class="rating">92%</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 DevOpsHub. Все права защищены. Если ваши данные не примонтированы, мы за них не отвечаем.</p>
+    </footer>
+
+</body>
+</html>
